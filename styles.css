@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+}
+
+.carta {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.carta div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.frontal {
+    background-color: #ffebcd;
+}
+
+.trasera {
+    background-color: #ffe4e1;
+    transform: rotateY(180deg);
+}
+
+.gatito {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.gatito-abierto {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.carta.open .frontal {
+    transform: rotateY(180deg);
+}
+
+.carta.open .trasera {
+    transform: rotateY(0deg);
+}
